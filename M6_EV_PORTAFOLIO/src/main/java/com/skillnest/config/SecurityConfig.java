@@ -43,7 +43,8 @@ public class SecurityConfig {
         		    .permitAll()
         		)
           .httpBasic(Customizer.withDefaults())
-          .csrf(csrf -> csrf.disable());
+          .csrf(Customizer.withDefaults());
+          //.csrf(csrf -> csrf.disable());
 
         return http.build();
     }
